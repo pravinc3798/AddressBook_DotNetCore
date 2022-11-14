@@ -4,6 +4,7 @@ using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace RepositoryLayer.Service
@@ -44,6 +45,23 @@ namespace RepositoryLayer.Service
             {
                 throw;
             }
+        }
+
+        public IEnumerable<AddressBookEntity> ViewAll()
+        {
+            try
+            {
+                var contacts = bookContext.AddressBookTable.AsEnumerable();
+                if (contacts != null)
+                    return contacts;
+                else
+                    return null;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }    
         }
     }
 }

@@ -9,5 +9,6 @@ namespace RepositoryLayer.Interface
     public interface IAddressBookRL
     {
         public AddressBookEntity Add(AddressBookModel bookModel);
+        public IEnumerable<AddressBookEntity> ViewAll();
     }
 }

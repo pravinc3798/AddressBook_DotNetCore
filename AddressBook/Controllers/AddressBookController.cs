@@ -33,5 +33,25 @@ namespace AddressBook.Controllers
                 throw;
             }
         }
+
+
+        [HttpGet]
+        [Route("ViewAll")]
+        public IActionResult ViewAll()
+        {
+            try
+            {
+                var result = addressBook.ViewAll();
+
+                if (result != null)
+                    return Ok(new { success = true, data = result });
+                else
+                    return BadRequest(new { success = false, message = "Nothing Found in the book" });
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
     }
 }

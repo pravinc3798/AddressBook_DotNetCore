@@ -9,5 +9,6 @@ namespace BusinessLayer.Interface
     public interface IAddressBookBL
     {
         public AddressBookEntity Add(AddressBookModel bookModel);
+        public IEnumerable<AddressBookEntity> ViewAll();
     }
 }

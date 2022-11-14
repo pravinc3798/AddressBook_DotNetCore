@@ -28,5 +28,17 @@ namespace BusinessLayer.Service
                 throw;
             }
         }
+
+        public IEnumerable<AddressBookEntity> ViewAll()
+        {
+            try
+            {
+                return addressBook.ViewAll();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
