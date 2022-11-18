@@ -1,3 +1,4 @@
+using AddressBook.RabbitMQ;
 using BusinessLayer.Interface;
 using BusinessLayer.Service;
 using Microsoft.AspNetCore.Builder;
@@ -64,6 +65,7 @@ namespace AddressBook
             services.AddDbContext<AddressBookContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:AddressBookDB"]));
             services.AddTransient<IAddressBookBL, AddressBookBL>();
             services.AddTransient<IAddressBookRL, AddressBookRL>();
+            services.AddTransient<IMessage, Message>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

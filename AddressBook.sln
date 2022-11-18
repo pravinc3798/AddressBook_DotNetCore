@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook", "AddressBook\AddressBook.csproj", "{0C97F5F1-03BF-4BFD-B8EE-A5F89A7C4857}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressBook", "AddressBook\AddressBook.csproj", "{0C97F5F1-03BF-4BFD-B8EE-A5F89A7C4857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{99915F42-A0C1-4D03-B9A6-9EEA6476C21D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{99915F42-A0C1-4D03-B9A6-9EEA6476C21D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLayer", "CommonLayer\CommonLayer.csproj", "{28510F1D-6203-4BFC-9B27-EBA7826C9639}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLayer", "CommonLayer\CommonLayer.csproj", "{28510F1D-6203-4BFC-9B27-EBA7826C9639}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{906DFC8D-A7FE-4C37-9FE3-C7215DF3B1D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{906DFC8D-A7FE-4C37-9FE3-C7215DF3B1D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBookReceiver", "AddressBookReceiver\AddressBookReceiver.csproj", "{40E56511-CBB1-4106-BFD9-A2B94409521A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{906DFC8D-A7FE-4C37-9FE3-C7215DF3B1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{906DFC8D-A7FE-4C37-9FE3-C7215DF3B1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{906DFC8D-A7FE-4C37-9FE3-C7215DF3B1D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40E56511-CBB1-4106-BFD9-A2B94409521A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40E56511-CBB1-4106-BFD9-A2B94409521A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40E56511-CBB1-4106-BFD9-A2B94409521A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40E56511-CBB1-4106-BFD9-A2B94409521A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

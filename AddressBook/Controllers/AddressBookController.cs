@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Interface;
+﻿using AddressBook.RabbitMQ;
+using BusinessLayer.Interface;
 using CommonLayer.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,10 +10,12 @@ namespace AddressBook.Controllers
     public class AddressBookController : ControllerBase
     {
         private readonly IAddressBookBL addressBook;
+        private readonly IMessage rabbitMessage;
 
-        public AddressBookController(IAddressBookBL addressBook)
+        public AddressBookController(IAddressBookBL addressBook, IMessage rabbitMessage)
         {
             this.addressBook = addressBook;
+            this.rabbitMessage = rabbitMessage;
         }
 
         [HttpPost]
@@ -24,7 +27,10 @@ namespace AddressBook.Controllers
                 var result = addressBook.Add(bookModel);
 
                 if (result != null)
+                {
+                    rabbitMessage.SendMessage(result);
                     return Ok(new { success = true, message = "Contact Has Been Added", data = result });
+                }
                 else
                     return BadRequest(new { success = false, message = "Something went wrong" });
             }
